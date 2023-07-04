@@ -29,7 +29,10 @@
           "node_modules/primeng/resources/primeng.min.css",
           "apps/trivia/src/styles.scss"
         ],
-        "scripts": []
+        "scripts": [],
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/shared/base-styles/src/lib"]
+        }
       },
       "configurations": {
         "production": {

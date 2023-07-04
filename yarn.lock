@@ -2479,11 +2479,6 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
-"@rlma/shared-styles@1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@rlma/shared-styles/-/shared-styles-1.0.6.tgz#7318db4b387a1cf612c6b284c68f39f6bedf6fd0"
-  integrity sha512-Ho+h5NXJgrMf+RLY2WdtdSH1FnK3WA0K/5g4QTXj7yfp/7uNKW4KKSkLKE/87AKUaWpe2faDDl/f5f3N+s6M0g==
-
 "@rollup/plugin-json@^6.0.0":
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-json/-/plugin-json-6.0.0.tgz#199fea6670fd4dfb1f4932250569b14719db234a"
