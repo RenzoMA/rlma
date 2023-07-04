@@ -1,0 +1,50 @@
+{
+  "name": "trivia-feature-setup",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/trivia/feature-setup/src",
+  "prefix": "rlma",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/trivia/feature-setup/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/trivia/feature-setup/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/trivia/feature-setup/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/trivia/feature-setup/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/trivia/feature-setup/**/*.ts",
+          "libs/trivia/feature-setup/**/*.html"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+$breakpoints: (
+  xs: 375px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+);
+
+@mixin responsive($breakpoint) {
+  @if ($breakpoint == xs) {
+    @media (min-width: map-get($breakpoints, xs)) {
+      @content;
+    }
+  } @else if ($breakpoint == sm) {
+    @media (min-width: map-get($breakpoints, sm)) {
+      @content;
+    }
+  } @else if ($breakpoint == md) {
+    @media (min-width: map-get($breakpoints, md)) {
+      @content;
+    }
+  } @else if ($breakpoint == lg) {
+    @media (min-width: map-get($breakpoints, lg)) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint. Use 'xs', 'sm', 'md' or 'lg'.";
+  }
+}

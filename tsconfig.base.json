@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@rlma/shared-styles": ["libs/shared/styles/shared-styles/src/index.ts"],
+      "@rlma/trivia/data-access": ["libs/trivia/data-access/src/index.ts"],
+      "@rlma/trivia/feature-home": ["libs/trivia/feature-home/src/index.ts"],
+      "@rlma/trivia/feature-setup": ["libs/trivia/feature-setup/src/index.ts"],
+      "@rlma/trivia/root-state": ["libs/trivia/root-state/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
