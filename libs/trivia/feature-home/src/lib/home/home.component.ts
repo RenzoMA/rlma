@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { v4 as uuidv4 } from 'uuid';
 import { FormBuilder, Validators } from '@angular/forms';
+import { CONFIG_DATA } from '@rlma/trivia/app-config';
 
 @Component({
   selector: 'rlma-home',
@@ -12,13 +13,14 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class HomeComponent {
   router = inject(Router);
   formBuilder = inject(FormBuilder);
+  test = inject(CONFIG_DATA);
 
   newGameForm = this.formBuilder.group({
     playerName: ['', [Validators.required, Validators.maxLength(15)]]
   });
 
   createRoom() {
-    
+    debugger;
     const gameId = uuidv4();
     const queryParams = { gameId };
     this.router.navigate(['/setup'], { queryParams });

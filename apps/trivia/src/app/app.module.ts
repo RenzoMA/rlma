@@ -8,7 +8,9 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { metaReducers, reducers } from '@rlma/trivia/root-state';
-import { NgOptimizedImage } from '@angular/common'
+import { NgOptimizedImage } from '@angular/common';
+import { configProvider, TriviaAppConfigModule } from '@rlma/trivia/app-config';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,8 +31,9 @@ import { NgOptimizedImage } from '@angular/common'
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot(),
     StoreDevtoolsModule.instrument({ logOnly: !isDevMode() }),
+    HttpClientModule,
+    TriviaAppConfigModule.forRoot()
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

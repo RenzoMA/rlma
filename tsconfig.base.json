@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@rlma/shared/base-styles": ["libs/shared/base-styles/src/index.ts"],
+      "@rlma/trivia/app-config": ["libs/trivia/app-config/src/index.ts"],
       "@rlma/trivia/data-access": ["libs/trivia/data-access/src/index.ts"],
       "@rlma/trivia/feature-home": ["libs/trivia/feature-home/src/index.ts"],
       "@rlma/trivia/feature-setup": ["libs/trivia/feature-setup/src/index.ts"],
