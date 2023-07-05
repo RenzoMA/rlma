@@ -20,7 +20,6 @@ export class HomeComponent {
   });
 
   createRoom() {
-    debugger;
     const gameId = uuidv4();
     const queryParams = { gameId };
     this.router.navigate(['/setup'], { queryParams });
