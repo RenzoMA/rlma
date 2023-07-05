@@ -32,4 +32,4 @@ export function logger(reducer: ActionReducer<State>): ActionReducer<State> {
 
 export const metaReducers: MetaReducer<State>[] = isDevMode() ? [logger] : [];
 
-export const { selectRouteData } = getRouterSelectors();
+export const { selectRouteData, selectQueryParam } = getRouterSelectors();

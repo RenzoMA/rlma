@@ -8,11 +8,13 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { metaReducers, reducers } from '@rlma/trivia/root-state';
+import { NgOptimizedImage } from '@angular/common'
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    NgOptimizedImage,
     RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
     StoreModule.forRoot(reducers, {
       metaReducers: metaReducers,

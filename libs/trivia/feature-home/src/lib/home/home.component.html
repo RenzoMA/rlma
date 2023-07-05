@@ -7,10 +7,16 @@
     Ready to test your wits? Join our trivia website! Unleash your inner genius
     and find out if you're a trivia titan.
     <span class="home__title-desktop">
-      Gather your friends, put on your thinking
-      caps, and let the trivia madness begin! Knowledge is power, and it's a
-      whole lot of fun too! 🎉</span
+      Gather your friends, put on your thinking caps, and let the trivia madness
+      begin! Knowledge is power, and it's a whole lot of fun too! 🎉</span
     >
   </p>
-  <p-button class="home__create-private" label="CREATE PRIVATE ROOM" (click)="toSetup()"></p-button>
+  <form [formGroup]="newGameForm">
+    <input type="text" pInputText placeholder="Player name" formControlName="playerName" required maxlength="15"/>
+    <p-button
+      class="home__create-private"
+      label="CREATE PRIVATE ROOM"
+      (click)="createRoom()"
+    ></p-button>
+  </form>
 </div>
