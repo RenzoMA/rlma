@@ -1,1 +1,16 @@
-
+name: Test Project
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.16.0
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Run tests
+        run: yarn nx run trivia:test
