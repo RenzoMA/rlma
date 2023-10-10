@@ -15,6 +15,7 @@ jobs:
       - name: Run tests
         run: yarn nx run trivia:test
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code
