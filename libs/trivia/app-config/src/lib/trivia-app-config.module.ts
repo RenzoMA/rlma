@@ -1,6 +1,6 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CONFIG, CONFIG_DATA, configProvider } from './config-data';
+import { CONFIG, CONFIG_TOKEN, configProvider } from './config-data';
 
 @NgModule({
   imports: [CommonModule],
@@ -10,11 +10,11 @@ export class TriviaAppConfigModule {
     return {
       ngModule: TriviaAppConfigModule,
       providers: [
+        configProvider,
         {
-          provide: CONFIG_DATA,
-          useValue: CONFIG,
-        },
-        configProvider
+          provide: CONFIG_TOKEN,
+          useFactory: () => CONFIG,
+        }
       ],
     };
   }

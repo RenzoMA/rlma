@@ -10,6 +10,7 @@ import { Store } from '@ngrx/store';
 import * as fromSetup from '../reducers';
 import { PlayerActions } from '../actions';
 import * as fromRoot from '@rlma/trivia/root-state';
+import { PlayerService } from '@rlma/trivia/data-access';
 
 @Component({
   selector: 'rlma-setup',
@@ -40,7 +41,8 @@ export class SetupComponent implements OnInit {
     })
   );
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   copyToClipboard() {
     this.gameId$

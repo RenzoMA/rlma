@@ -11,9 +11,10 @@
       begin! Knowledge is power, and it's a whole lot of fun too! 🎉</span
     >
   </p>
-  <form [formGroup]="newGameForm">
+  <form [formGroup]="newGameForm" class="home__form">
     <input type="text" pInputText placeholder="Player name" formControlName="playerName" required maxlength="15"/>
     <p-button
+      [disabled]="this.newGameForm.invalid"
       class="home__create-private"
       label="CREATE PRIVATE ROOM"
       (click)="createRoom()"
